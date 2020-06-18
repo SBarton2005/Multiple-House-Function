@@ -1,7 +1,7 @@
 import turtle
 h = turtle.Turtle()
 h.up()
-h.backward(200)
+h.backward(290)
 def house():
   number = int(input("# of Houses: "))
   i = 0
@@ -11,16 +11,7 @@ def house():
     dh = int(input("Door Height: "))
     dw = int(input("Door Width: "))
     distance = (length / 2) - (dw /2)
-    chimney = input("Is there a chimeny: ")
-    if chimney == "yes":
-      ch1 = int(input("Chimney Height: "))
-      if distance > 20:
-        cw = 20
-      else:
-        cw = distance
-      ch2 = ch1 - (cw * (3 ^ 1/2))
-    color = input("Color: ")
-    distance = (length / 2) - (dw /2)  
+    color = input("Color: ") 
     h.down()
     h.color(color)
     h.forward(length)
@@ -45,27 +36,6 @@ def house():
     h.right(90)
     h.forward(dh)
     h.left(90)
-    if chimney == "yes":
-      h.right(180)
-      h.forward(dw)
-      h.forward(distance)
-      h.right(90)
-      h.forward(height)
-      h.forward(ch1)
-      h.right(90)
-      h.forward(cw)
-      h.left(90)
-      h.forward(ch2)
-      h.left(180)
-      h.forward(ch2)
-      h.right(90)
-      h.forward(cw)
-      h.left(90)
-      h.forward(ch1)
-      h.forward(height)
-      h.left(90)
-      h.forward(distance)
-      h.forward(dw)
     h.up()
     a = distance + 20
     h.forward(a)
